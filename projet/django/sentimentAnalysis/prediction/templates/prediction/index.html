@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row justify-content-md-center mt-4">
+    <div class="col-md-8">
+        <h1 class="display-5 text-center">Sentiment analysis</h1>
+        <div class="mb-3">
+            <textarea id="text-to-predict" class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+        </div>
+        <button id="predict" type="button" class="btn btn-secondary">Predict</button>
+        <div id="result" class="mt-3"></div>
+    </div>
+    
+</div>
+<script src="{% static 'prediction/prediction.js' %}">
+</script>
+{% endblock %}

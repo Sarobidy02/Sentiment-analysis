@@ -1,0 +1,21 @@
+{% load static %}
+<html lang="en">
+    <head>
+        <script src="https://cdn.plot.ly/plotly-2.16.1.min.js"></script>
+        <meta charset="utf-8">
+        <title>Predictor</title>
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/css.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row justify-content-md-center">
+                {% include 'partials/navbar.html' %}
+
+                {% block content %}
+                
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
