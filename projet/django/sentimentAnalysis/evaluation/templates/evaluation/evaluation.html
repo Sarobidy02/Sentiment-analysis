@@ -1,0 +1,26 @@
+{%extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row justify-content-md-center mt-4">
+    <div class="col-md-8">
+        <h1 class="display-5 text-center">Overal test metrics</h1>
+        <div class="container">
+            <div class="row g-2">
+              <div class="col-6">
+                <div class="p-3 border bg-light"><p class="text-center">Precision <strong>{{ precision }}%</strong></p></div>
+              </div>
+              <div class="col-6">
+                <div class="p-3 border bg-light"><p class="text-center">Recall <strong>{{ recall }}%</strong></p></div>
+              </div>
+              <div class="col-6">
+                <div class="p-3 border bg-light"><p class="text-center">Accuracy <strong>{{ accuracy }}%</strong></p></div>
+              </div>
+              <div class="col-6">
+                <div class="p-3 border bg-light"><p class="text-center">F1-score <strong>{{ fone }}%</strong></p></div>
+              </div>
+            </div>
+          </div>
+    </div>
+    
+</div>
+{%endblock%}
