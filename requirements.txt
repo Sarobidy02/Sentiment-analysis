@@ -1,1 +1,5 @@
 Django==4.1
+nltk==3.6.5
+pandas @ file:///C:/ci/pandas_1635506685681/work
+scikit-learn @ file:///C:/ci/scikit-learn_1622739499047/work
+oauthlib==3.2.2
