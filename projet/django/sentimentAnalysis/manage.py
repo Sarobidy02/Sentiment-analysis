@@ -2,7 +2,14 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+from nltk.stem import LancasterStemmer
+from sklearn.feature_extraction.text import CountVectorizer
 
+class StemmedCountVectorizer(CountVectorizer):
+    def build_analyzer(self):
+        analyzer = super(StemmedCountVectorizer, self).build_analyzer()
+        stemmer = LancasterStemmer()
+        return lambda doc: ([stemmer.stem(w) for w in analyzer(doc)])
 
 def main():
     """Run administrative tasks."""
