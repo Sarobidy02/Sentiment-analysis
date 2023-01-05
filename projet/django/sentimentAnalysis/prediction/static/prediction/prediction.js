@@ -17,8 +17,9 @@ button.addEventListener('click', (event) => {
             const sentiment = data.sentiment
             const proba = data.proba;
             result.innerHTML = `<div class="p-3 border bg-light">
-            <p class="text-center">${sentiment} <strong>${proba}%</strong></p>
+            <p class="text-center"><strong>${sentiment}</strong></p>
             </div>`;
+            console.log(result.innerHTML)
         })
         .catch(error => {})
 
